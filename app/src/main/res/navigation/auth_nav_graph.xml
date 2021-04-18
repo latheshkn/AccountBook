@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/signUpFragment">
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.unitedsoftek.accountbook.ui.auth.fragment.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.unitedsoftek.accountbook.ui.auth.fragment.OtpFragment"
+        android:label="Varify"
+        tools:layout="@layout/fragment_otp">
+        <action
+            android:id="@+id/action_otpFragment_to_companyRegistrationFragment2"
+            app:destination="@id/companyRegistrationFragment" />
+        <argument
+            android:name="mobileNum"
+            app:argType="string" />
+        <argument
+            android:name="otp"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="UserExistsOrNot"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_otpFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/companyRegistrationFragment"
+        android:name="com.unitedsoftek.accountbook.ui.auth.fragment.CompanyRegistrationFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_company_registration">
+        <action
+            android:id="@+id/action_companyRegistrationFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_companyRegistrationFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <argument
+            android:name="mobile"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.unitedsoftek.accountbook.ui.auth.fragment.DashBoardFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_dash_board" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.unitedsoftek.accountbook.MainActivity"
+        android:label="Home"
+        tools:layout="@layout/activity_main" />
+</navigation>

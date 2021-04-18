@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_navigation"
+    app:startDestination="@id/dashBoardFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.gallery.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/dashBoardFragment2"
+        android:name="com.unitedsoftek.accountbook.ui.auth.fragment.DashBoardFragment"
+        android:label="Home"
+        app:startDestination="@id/action_dashBoardFragment2_to_salesFragment"
+        tools:layout="@layout/fragment_dash_board">
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_businessGstFragment"
+            app:destination="@id/businessGstFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_salesFragment"
+            app:destination="@id/salesFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_allPartyFragment"
+            app:destination="@id/allPartyFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_repostFragment"
+            app:destination="@id/repostFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_quotionFragment"
+            app:destination="@id/quotionFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_quotationReportFragment2"
+            app:destination="@id/quotationReportFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessGstFragment"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.fragment.BusinessGstFragment"
+        android:label="Personal Details" />
+    <fragment
+        android:id="@+id/salesFragment"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.fragment.SalesFragment"
+        android:label="Add sales"
+        tools:layout="@layout/fragment_sales">
+        <action
+            android:id="@+id/action_salesFragment_to_itemSalesListFragment"
+            app:destination="@id/itemSalesListFragment" />
+        <argument
+            android:name="Cname"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="Cmobile"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="Cgst"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/allPartyFragment"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.fragment.AllPartyFragment"
+        android:label="Party List"
+        tools:layout="@layout/fragment_all_party">
+        <action
+            android:id="@+id/action_allPartyFragment_to_addpartyFragment"
+            app:destination="@id/addpartyFragment" />
+        <action
+            android:id="@+id/action_allPartyFragment_to_salesFragment2"
+            app:destination="@id/salesFragment" />
+        <action
+            android:id="@+id/action_allPartyFragment_to_quotionFragment"
+            app:destination="@id/quotionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/repostFragment"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.fragment.ReportFragment"
+        android:label="Sales List"
+        tools:layout="@layout/report" />
+    <fragment
+        android:id="@+id/quotionFragment"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.fragment.QuotionFragment"
+        android:label="Add Quotation"
+        tools:layout="@layout/fragment_quotion">
+        <action
+            android:id="@+id/action_quotionFragment_to_itemQuotationListFragment"
+            app:destination="@id/itemQuotationListFragment" />
+        <argument
+            android:name="Cname"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="Cmobile"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="Cgst"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addpartyFragment"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.fragment.AddpartyFragment"
+        android:label="Add Customer"
+        tools:layout="@layout/fragment_add_party">
+        <action
+            android:id="@+id/action_addpartyFragment_to_contactListFragment"
+            app:destination="@id/contactListFragment" />
+        <argument
+            android:name="CustomerName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="CustomerNo"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_addpartyFragment_to_allPartyFragment"
+            app:destination="@id/allPartyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactListFragment"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.fragment.ContactListFragment"
+        android:label="Contacts"
+        tools:layout="@layout/fragment_contact_list">
+        <action
+            android:id="@+id/action_contactListFragment_to_addpartyFragment"
+            app:destination="@id/addpartyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemSalesListFragment"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.fragment.ItemSalesListFragment"
+        android:label="Sales"
+        tools:layout="@layout/fragment_item_sales_list">
+        <argument
+            android:name="itemName"
+            app:argType="string" />
+        <argument
+            android:name="partyName"
+            app:argType="string" />
+        <argument
+            android:name="mobileNo"
+            app:argType="string" />
+        <argument
+            android:name="gst"
+            app:argType="string" />
+        <argument
+            android:name="price"
+            app:argType="string" />
+        <argument
+            android:name="quantity"
+            app:argType="string" />
+        <argument
+            android:name="discount"
+            app:argType="string" />
+        <argument
+            android:name="tax"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemQuotationListFragment"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.fragment.ItemQuotationListFragment"
+        android:label="Quotation"
+        tools:layout="@layout/fragment_item_quotation_list">
+        <argument
+            android:name="itemName"
+            app:argType="string" />
+        <argument
+            android:name="partyName"
+            app:argType="string" />
+        <argument
+            android:name="mobilrNo"
+            app:argType="string" />
+        <argument
+            android:name="gst"
+            app:argType="string" />
+        <argument
+            android:name="price"
+            app:argType="string" />
+        <argument
+            android:name="quantity"
+            app:argType="string" />
+        <argument
+            android:name="discount"
+            app:argType="string" />
+        <argument
+            android:name="tax"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/quotationReportFragment2"
+        android:name="com.unitedsoftek.accountbook.ui.home.ui.fragment.QuotationReportFragment"
+        android:label="Quotation "
+        tools:layout="@layout/fragment_quotation_report" />
+</navigation>

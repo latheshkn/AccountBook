@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/l_grey"
+    tools:context=".ui.home.DashBoardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/l_grey">
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/toolbarConst"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/white"-->
+<!--            android:paddingBottom="10dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/backIc"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:src="@drawable/back_ic"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:tint="@color/black" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Business &amp; GST Settings"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/backIc"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@id/backIc" />-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/busNameConst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1.5dp"
+            android:background="@color/white"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/busLogo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/image_bg"
+                android:padding="10dp"
+                android:src="@drawable/imagte_uplod"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/mainColor" />
+
+            <TextView
+                android:id="@+id/busNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:text="Business Name"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/busLogo"
+                app:layout_constraintTop_toTopOf="@id/busLogo" />
+
+            <EditText
+                android:id="@+id/editBName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/edt_boder"
+                android:padding="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/busLogo"
+                app:layout_constraintTop_toBottomOf="@id/busNameTxt" />
+            <Button
+                android:id="@+id/btnUpd"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Update"
+                android:background="@drawable/button_bg"
+                app:layout_constraintTop_toBottomOf="@+id/editBName"
+                app:layout_constraintStart_toStartOf="@+id/editBName"
+                app:layout_constraintEnd_toEndOf="@+id/editBName"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/busNumLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white"
+            android:padding="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/busNameConst">
+
+            <ImageView
+                android:id="@+id/callIc"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_call"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/mainColor" />
+
+            <TextView
+                android:id="@+id/busNtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Business Phone Number"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/callIc"
+                app:layout_constraintStart_toEndOf="@id/callIc"
+                app:layout_constraintTop_toTopOf="@id/callIc" />
+
+            <TextView
+                android:id="@+id/busNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="8755420120"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@id/callIc"
+                app:layout_constraintEnd_toStartOf="@id/forward1"
+                app:layout_constraintTop_toTopOf="@id/callIc" />
+
+
+            <ImageView
+                android:id="@+id/forward1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_forward_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/busGmaiLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/l_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/busNumLayout">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gstNumLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:padding="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/gstIc"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_gst"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/mainColor" />
+
+                <TextView
+                    android:id="@+id/gsttxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="GST Number"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/gstIc"
+                    app:layout_constraintStart_toEndOf="@id/gstIc"
+                    app:layout_constraintTop_toTopOf="@id/gstIc" />
+
+                <TextView
+                    android:id="@+id/gstNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="123HF12RKWIO45"
+                    android:textColor="@color/grey"
+                    app:layout_constraintBottom_toBottomOf="@id/gstIc"
+                    app:layout_constraintEnd_toStartOf="@id/forward2"
+                    app:layout_constraintTop_toTopOf="@id/gstIc" />
+
+
+                <ImageView
+                    android:id="@+id/forward2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_forward_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/busAddressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:padding="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gstNumLayout">
+
+                <ImageView
+                    android:id="@+id/addressIc"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_office"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/mainColor" />
+
+                <TextView
+                    android:id="@+id/addtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Business Address"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/addressIc"
+                    app:layout_constraintStart_toEndOf="@id/addressIc"
+                    app:layout_constraintTop_toTopOf="@id/addressIc" />
+
+                <TextView
+                    android:id="@+id/busAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="145dp"
+                    android:lineHeight="18dp"
+                    android:textAlignment="textStart"
+                    android:text="Vill Nayakgoth Tanakpur Uttrakhand Pincode 262309"
+                    android:textColor="@color/grey"
+                    app:layout_constraintEnd_toStartOf="@id/forward3"
+                    app:layout_constraintTop_toTopOf="@id/addressIc" />
+
+
+                <ImageView
+                    android:id="@+id/forward3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_forward_arrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/busPayLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/l_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/busGmaiLayout">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/upiLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:padding="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/upiIc"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/upi"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/mainColor" />
+
+                <TextView
+                    android:id="@+id/upitxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="UPI ID"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/upiIc"
+                    app:layout_constraintStart_toEndOf="@id/upiIc"
+                    app:layout_constraintTop_toTopOf="@id/upiIc" />
+
+                <TextView
+                    android:id="@+id/upiId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:maxWidth="180dp"
+                    android:text="bohrapankaj102@upi"
+                    android:textColor="@color/grey"
+                    app:layout_constraintBottom_toBottomOf="@id/upiIc"
+                    app:layout_constraintEnd_toStartOf="@id/forward4"
+                    app:layout_constraintTop_toTopOf="@id/upiIc" />
+
+
+                <ImageView
+                    android:id="@+id/forward4"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_forward_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/busBankLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:padding="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/upiLayout">
+
+                <ImageView
+                    android:id="@+id/bankIc"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/bank_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/mainColor" />
+
+                <TextView
+                    android:id="@+id/banktxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Bank Details"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/bankIc"
+                    app:layout_constraintStart_toEndOf="@id/bankIc"
+                    app:layout_constraintTop_toTopOf="@id/bankIc" />
+
+                <TextView
+                    android:id="@+id/busBankDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="145dp"
+                    android:lineHeight="18dp"
+                    android:textAlignment="textStart"
+                    android:text="692100010039347 Punjab National Bank Tankapur"
+                    android:textColor="@color/grey"
+                    app:layout_constraintEnd_toStartOf="@id/forward5"
+                    app:layout_constraintTop_toTopOf="@id/bankIc" />
+
+
+                <ImageView
+                    android:id="@+id/forward5"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_forward_arrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+<ProgressBar
+    android:id="@+id/progressProfile"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

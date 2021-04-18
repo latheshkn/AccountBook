@@ -1,0 +1,12 @@
+package com.unitedsoftek.accountbook.Models
+
+data class AddQuotionModel(
+    var user_mobile:String,
+    var customer_contact_no:String,
+    var customer_gst_no:String,
+    var customer_name:String,
+    var quotation_no:String,
+    var total_amount:String,
+    var user_id:String,
+    var item_list:ArrayList<AddQuatationResponseModel>
+)

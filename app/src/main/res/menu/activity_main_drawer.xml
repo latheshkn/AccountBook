@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashBoardFragment2"
+            android:icon="@drawable/home"
+            android:title="Home"
+            />
+
+        <item
+            android:id="@+id/allPartyFragment"
+            android:icon="@drawable/all_parites"
+            android:title="All Party" />
+
+        <item
+            android:id="@+id/salesFragment"
+            android:icon="@drawable/sales"
+            android:title="Sales"
+            app:showAsAction="always"/>
+
+        <item
+            android:id="@+id/quotionFragment"
+            android:icon="@drawable/quotation"
+            android:title="Quotation" />
+        <item
+            android:icon="@drawable/report"
+            android:title="Report" >
+            <menu>
+                <item
+                    android:title="Sales Report"
+                    android:id="@+id/repostFragment"/>
+                <item
+                    android:title="Quotation Report"
+                    android:id="@+id/quotationReportFragment2"/>
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="support">
+        <menu>
+            <item
+                android:id="@+id/setting"
+                android:icon="@drawable/setting"
+                android:title="Setting" />
+
+            <item
+                android:id="@+id/sshare"
+                android:icon="@drawable/sales_return"
+                android:title="Share" />
+        </menu>
+    </item>
+
+
+
+
+
+
+
+</menu>

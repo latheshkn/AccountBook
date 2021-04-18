@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.home.ui.adapters.SalesListadapter">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/text_serial_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Bill No"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/text_serial_no"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"
+                app:layout_constraintEnd_toStartOf="@+id/imagesselceted"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_item_subtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Amount"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/txt_item_name"
+                app:layout_constraintTop_toBottomOf="@+id/txt_item_name" />
+
+            <TextView
+                android:id="@+id/txt_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="20"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/txt_multiply_sign"
+                app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
+
+            <TextView
+                android:id="@+id/txt_multiply_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="*"
+                android:visibility="gone"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/txt_quantity"
+                app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="₹20"
+                android:visibility="gone"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/txt_multiply_sign"
+                app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
+
+            <TextView
+                android:id="@+id/txt_equal_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="="
+                android:visibility="gone"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/txt_price"
+                app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
+
+            <TextView
+                android:id="@+id/txt_subtotal_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="400"
+                android:layout_marginRight="5dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/txt_amount"
+                app:layout_constraintStart_toEndOf="@+id/txt_equal_sign"
+                app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
+
+            <TextView
+                android:id="@+id/txt_tax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Date"
+                app:layout_constraintStart_toStartOf="@+id/txt_item_subtotal"
+                app:layout_constraintTop_toBottomOf="@+id/txt_item_subtotal" />
+
+            <TextView
+                android:id="@+id/txt_tax_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0.0"
+                app:layout_constraintEnd_toEndOf="@+id/txt_subtotal_amount"
+                app:layout_constraintTop_toBottomOf="@+id/txt_item_subtotal"
+                />
+            <ImageView
+                android:id="@+id/imagesselceted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/delete"
+                android:backgroundTint="@color/mainColor"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_tax_amount"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
